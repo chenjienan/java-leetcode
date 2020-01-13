@@ -24,7 +24,7 @@ public class KSmallestInUnsortedArray {
                 // } else {                // o1 has less priority than o2
                 //     return 1;
                 // }
-                return o1 > o2 ? -1 : 1;
+                return o1 < o2 ? 1 : -1;
             }
         });
 

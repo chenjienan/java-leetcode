@@ -46,5 +46,6 @@ public class LayerOrder {
         
         ListPrinter<Integer> lp = new ListPrinter<>();
         lp.printListOfList(layerByLayer(root));
+
     }
 }

@@ -1,4 +1,5 @@
 package linkedlist;
+
 import tools.*;
 
 public class LinkedListMergeSort {
