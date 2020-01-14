@@ -5,6 +5,9 @@ public class AllPermutationsI {
     
     public List<String> permutations(String input) {
         List<String> res = new ArrayList<>();
+        if (input.length() == 0) {
+            return res;
+        }
         char[] charArray = input.toCharArray();
         DFS(charArray, 0, res);
 
@@ -12,7 +15,7 @@ public class AllPermutationsI {
     }
     
     private void DFS(char[] charArray, int index, List<String> res) {
-        if (index == charArray.length) {
+        if (index == charArray.length - 1) {
             res.add(new String(charArray));
             return;
         }
@@ -33,7 +36,7 @@ public class AllPermutationsI {
 
     public static void main(String[] args)
 	{
-        String str = "";
+        String str = "abc";
         AllPermutationsI solution = new AllPermutationsI();
         System.out.println(solution.permutations(str));
 	}
