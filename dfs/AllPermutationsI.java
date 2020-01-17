@@ -38,7 +38,7 @@ public class AllPermutationsI {
 
     public static void main(String[] args)
 	{
-        String str = "";
+        String str = "abc";
         AllPermutationsI solution = new AllPermutationsI();
         System.out.println(solution.permutations(str));
 	}
