@@ -5,6 +5,11 @@ public class AllPermutationsI {
     
     public List<String> permutations(String input) {
         List<String> res = new ArrayList<>();
+        if (input.length() == 0) {
+            res.add(new String(""));
+            return res;
+        }
+        
         char[] charArray = input.toCharArray();
         DFS(charArray, 0, res);
 
@@ -12,7 +17,7 @@ public class AllPermutationsI {
     }
     
     private void DFS(char[] charArray, int index, List<String> res) {
-        if (index == charArray.length) {
+        if (index == charArray.length - 1) {
             res.add(new String(charArray));
             return;
         }

@@ -1,6 +1,6 @@
 package linkedlist;
 
-import tools.*;
+import tools.ListNode;
 
 public class LinkedListMergeSort {
 	public static void main(String[] args)
