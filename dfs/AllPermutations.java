@@ -1,9 +1,9 @@
 package dfs;
 import java.util.*;
 
-public class AllPermutationsI {
+public class AllPermutations {
     
-    public List<String> permutations(String input) {
+    public List<String> permutations1(String input) {
         List<String> res = new ArrayList<>();
         if (input.length() == 0) {
             res.add(new String(""));
@@ -35,11 +35,17 @@ public class AllPermutationsI {
         charArray[j] = temp;
     }
 
+    public List<String> permutations2(String input) {
+        
+        List<String> res = new ArrayList<>();
+        return res;
+    }
+
 
     public static void main(String[] args)
 	{
         String str = "abc";
-        AllPermutationsI solution = new AllPermutationsI();
-        System.out.println(solution.permutations(str));
+        AllPermutations solution = new AllPermutations();
+        System.out.println(solution.permutations1(str));
 	}
 }

@@ -1,9 +1,9 @@
 package dfs;
 import java.util.*;
 
-public class AllSubSetI {
+public class AllSubSet {
 
-    public static List<String> subSets(String set) {
+    public List<String> subSets1(String set) {
         
         List<String> res = new ArrayList<>();
 
@@ -17,7 +17,7 @@ public class AllSubSetI {
         return res;
     }
 
-    private static void DFS(char[] input, int index, StringBuilder prefix, List<String> res) {
+    private void DFS(char[] input, int index, StringBuilder prefix, List<String> res) {
         if (index == input.length) {
             res.add(prefix.toString());     // O(n)
             return;
@@ -35,7 +35,8 @@ public class AllSubSetI {
 	public static void main(String[] args)
 	{
         String str = null;
-        List<String> res = subSets(str);
+        AllSubSet solution = new AllSubSet();
+        List<String> res = solution.subSets1(str);
         System.out.println(res);
 	}
 }
