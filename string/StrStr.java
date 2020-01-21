@@ -71,8 +71,8 @@ public class StrStr {
 
     
     public static void main(String[] args) {
-        String s1 = "issippi";
-        String s2 = "issip";
+        String s1 = "abcdef";
+        String s2 = "def";
 
         StrStr solution = new StrStr();
         System.out.println(solution.strstr(s1, s2));
