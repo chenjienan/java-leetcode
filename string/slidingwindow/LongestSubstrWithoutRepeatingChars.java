@@ -1,4 +1,4 @@
-package string;
+package string.slidingwindow;
 
 import java.util.HashSet;
 
