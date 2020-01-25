@@ -3,16 +3,7 @@ package linkedlist;
 import tools.ListNode;
 
 public class LinkedListMergeSort {
-	public static void main(String[] args)
-	{
-		int[] A = {4,2, 6, 5};
-		ListNode head = ListNode.createLinkedList(A);
-
-		LinkedListMergeSort s = new LinkedListMergeSort();
-		ListNode sortedHead = s.mergeSort(head);
-		ListNode.printList(sortedHead);
-	}
-
+	
 	public ListNode mergeSort(ListNode head) {
 		if (head == null || head.next == null) {
 		  return head;
@@ -65,6 +56,16 @@ public class LinkedListMergeSort {
 		}
 	
 		return dummy.next;
+	}
+
+	public static void main(String[] args)
+	{
+		int[] A = {4,2, 6, 5};
+		ListNode head = ListNode.createLinkedList(A);
+
+		LinkedListMergeSort s = new LinkedListMergeSort();
+		ListNode sortedHead = s.mergeSort(head);
+		ListNode.printList(sortedHead);
 	}
 }
 
