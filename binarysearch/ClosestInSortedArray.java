@@ -1,7 +1,4 @@
 package binarysearch;
-import java.util.*;
-
-
 
 
 public class ClosestInSortedArray {

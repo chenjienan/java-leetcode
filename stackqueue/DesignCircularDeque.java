@@ -89,17 +89,7 @@ class MyCircularDeque {
   }
 
   public static void main(String[] args) {
-    MyCircularDeque obj = new MyCircularDeque(10);
-    boolean param_1 = obj.insertFront(1);
-    boolean param_2 = obj.insertLast(2);
-    boolean param_3 = obj.deleteFront();
-    boolean param_4 = obj.deleteLast();
-    int param_5 = obj.getFront();
-    int param_6 = obj.getRear();
-    boolean param_7 = obj.isEmpty();
-    boolean param_8 = obj.isFull();
-
-    
+    // MyCircularDeque obj = new MyCircularDeque(10);
   }
 }
 
