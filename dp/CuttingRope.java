@@ -7,9 +7,6 @@ public class CuttingRope {
 
     for (int i = 2; i <= length; i++) {
       for (int j = 1; j < i; j++) {
-        int a = memo[i];
-        int b = memo[j];
-        int c = i - j;
         memo[i] = Math.max(memo[i], Math.max(j, memo[j]) * (i - j));
       }
     }
