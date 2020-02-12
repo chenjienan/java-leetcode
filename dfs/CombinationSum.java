@@ -62,7 +62,7 @@ public class CombinationSum {
   public static void main(String[] args) {
     int[] arr = {7, 3, 6, 2};
     CombinationSum sol = new CombinationSum();
-    // System.out.println(sol.combinationSum(arr, 7));
+    System.out.println(sol.combinationSum(arr, 7));
 
     int[] arr2 = {10,1,2,7,6,1,5};
     System.out.println(sol.combinationSum2(arr2, 8));
