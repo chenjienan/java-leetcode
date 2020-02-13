@@ -4,12 +4,15 @@ import java.util.*;
 
 public class FactorialCombination {
   public List<List<Integer>> combinations(int target) {
-
+    
     List<List<Integer>> res = new ArrayList<>();
     List<Integer> sol = new ArrayList<>();
     
-    if (target <= 1) {
+    if (target <= 0) {
       res.add(sol);
+      return res;
+    }
+    if (target == 1) {
       return res;
     }
     
@@ -22,7 +25,6 @@ public class FactorialCombination {
       }
     }
     if (factorialsSet.isEmpty()) {
-      res.add(sol);
       return res;
     }
     
