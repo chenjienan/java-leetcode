@@ -1,7 +1,7 @@
 package psr;
 
-import java.util.Arrays;
-import java.util.Random;
+import java.util.*;
+import tools.*;
 
 
 public class PerfectShuffle {
@@ -25,9 +25,10 @@ public class PerfectShuffle {
     int[] A = {1,2,3,4,5};
     PerfectShuffle sol = new PerfectShuffle();
     sol.shuffle(A);
-    for (int i = 0; i < A.length; i++) {
-      System.out.println(A[i]);
-    }
+    // for (int i = 0; i < A.length; i++) {
+    //   System.out.println(A[i]);
+    // }
+    System.out.print(Arrays.toString(A));
   }
 }
 
