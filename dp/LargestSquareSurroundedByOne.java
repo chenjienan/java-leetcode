@@ -39,14 +39,13 @@ public class LargestSquareSurroundedByOne {
     int globalMaxLen = 0;
     for (int r = 0; r < rows; r++) {
       for (int c = 0; c < cols; c++) {
-        int maxLen = Math.min(rows - r, cols - c); 
-        for (int len = maxLen; len >= 1; len--) {
-          int top = goLeft[r][c];
-          int left = goUp[r][c];
+        int top = goLeft[r][c];
+        int left = goUp[r][c];
+        int maxLen = Math.min(top, left); 
+        for (int len = maxLen; len >= 1; len--) {          
           int bottom = goLeft[r + len - 1][c];
-          int right = goUp[r][c + len - 1];
-          
-          if (top >= len && left >= len && bottom >= len && right >= len) {
+          int right = goUp[r][c + len - 1];          
+          if (bottom >= len && right >= len) {
             globalMaxLen = Math.max(globalMaxLen, len);
           }
         }        
