@@ -30,6 +30,6 @@ public class InsertInSortedLinkedList {
 		ListNode head = ListNode.createLinkedList(A);
 
 		InsertInSortedLinkedList sol = new InsertInSortedLinkedList();
-		ListNode.printList(sol.insert(head, 6));
+		ListNode.printList(sol.insert(head, -1));
 	}
 }
