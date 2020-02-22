@@ -32,8 +32,8 @@ public class PreorderTraversal {
 	public static void main(String[] args)
 	{
 		List<Integer> nodes = new ArrayList<>(Arrays.asList(5,2,10,1,3,8,13,null,null,null,4,null,null,11,15));
-        TreeNode<Integer> nodeInstance = new TreeNode<Integer>(0);
-        TreeNode<Integer> root = nodeInstance.deserializeFromList(nodes);
+		TreeNode<Integer> nodeInstance = new TreeNode<Integer>(0);
+		TreeNode<Integer> root = nodeInstance.deserializeFromList(nodes);
 		BinaryTreePrinter.printNode(root);
 		
 		System.out.println(preOrder(root));

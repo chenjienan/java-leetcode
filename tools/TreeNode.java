@@ -25,7 +25,7 @@ public class TreeNode<T extends Comparable<?>> {
         while (i < arr.size()) {
             TreeNode<T> curNode = queue.poll();
             
-            // find left child
+            // find left child (already check if i < length in the while loop)
             if (arr.get(i) != null) {
                 curNode.left = new TreeNode<T>(arr.get(i));
                 queue.offer(curNode.left);
@@ -33,7 +33,7 @@ public class TreeNode<T extends Comparable<?>> {
             i++; // move to the next element
 
              // find right child
-            if (arr.get(i) != null) {
+            if (i < arr.size() && arr.get(i) != null) {
                 curNode.right = new TreeNode<T>(arr.get(i));
                 queue.offer(curNode.right);     
             }
