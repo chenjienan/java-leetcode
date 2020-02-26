@@ -1,7 +1,6 @@
 package psr;
 
 import java.util.*;
-import tools.*;
 
 
 public class PerfectShuffle {

@@ -3,7 +3,7 @@ import tools.*;
 import java.util.*;
 
 public class MinimumDepthBinaryTree {
-  public int minDepth(TreeNode root) {
+  public int minDepth(TreeNode<Integer> root) {
   
     // base case
     if (root == null) {
