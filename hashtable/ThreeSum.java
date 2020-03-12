@@ -4,18 +4,20 @@ import java.util.*;
 
 public class ThreeSum {
   public List<List<Integer>> allTriples(int[] array, int target) {
+    Arrays.sort(array); // sort the array to avoid duplicate triples
+
     List<List<Integer>> res = new ArrayList<>();
-    Set<Integer> used = new HashSet<>();
-    for (int i = 0; i < array.length; i++) {
-      List<List<Integer>> twoSumRes = twoSum(array, i + 1, array.length, target - array[i]);
-      if (twoSumRes.size() != 0 && !used.contains(array[i])) {
-        used.add(array[i]);
-        for (List<Integer> ls : twoSumRes) {
-          List<Integer> newLs = new ArrayList<>(ls);
-          newLs.add(array[i]);
-          res.add(newLs);
+    for (int i = 0; i < array.length - 2; i++) {
+      if (i == 0 || array[i] != array[i - 1]){  // skip duplicates
+        List<List<Integer>> twoSumRes = twoSum(array, i + 1, array.length, target - array[i]);
+        if (twoSumRes.size() != 0) {
+          for (List<Integer> ls : twoSumRes) {
+            List<Integer> newLs = new ArrayList<>(ls);
+            newLs.add(array[i]);
+            res.add(newLs);
+          }
         }
-      }
+      }      
     }
     return res;
   }
