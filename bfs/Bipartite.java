@@ -68,10 +68,10 @@ public class Bipartite {
         node3.neighbors.add(node2);
 
         List<GraphNode> nodeList = new ArrayList<>();
-        nodeList.add(node0);
-        nodeList.add(node1);
-        nodeList.add(node2);
-        nodeList.add(node3);
+        // nodeList.add(node0);
+        // nodeList.add(node1);
+        // nodeList.add(node2);
+        // nodeList.add(node3);
 
         System.out.println(isBipartite(nodeList));
 	}

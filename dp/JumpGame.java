@@ -44,11 +44,40 @@ public class JumpGame {
     
   }
 
+  public int minJump2(int[] array) {
+
+  
+    int[] memo = new int[array.length];
+    for (int k = 1; k < array.length; k++) {    
+      memo[k] = -1;      
+    }
+    // base case
+    memo[0] = 0;    
+    for (int i = 0; i < array.length - 1; i++){ 
+
+      if (memo[i] == -1) {
+        break;
+      }
+      int curJump = memo[i] + 1;      
+      for (int j = 1; j <= array[i]; j++) {
+        if (i + j < array.length) {     
+          if (memo[i + j] == -1) {
+            memo[i + j] = curJump;
+          } else {
+            memo[i + j] = Math.min(memo[i + j], curJump);
+          }
+        }           
+      }
+    }
+    
+    return memo[array.length - 1];
+  }
+
   public static void main(String[] args) {
-    int[] A = {3, 3, 1, 0, 4};
+    int[] A = {2,1,0,3,1};
     // int[] A = {2, 1, 1, 0, 2};
 
     JumpGame sol = new JumpGame();
-    System.out.println(sol.minJump(A));
+    System.out.println(sol.minJump2(A));
   }
 }
