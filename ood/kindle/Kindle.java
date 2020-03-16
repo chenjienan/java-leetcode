@@ -10,7 +10,7 @@ import java.util.List;
 
 public class Kindle {
     private List<Book> books;
-	private EBookReaderFactory readerFactory;
+		private EBookReaderFactory readerFactory;
 
 	public Kindle() {
 		books = new ArrayList<>();
@@ -35,19 +35,5 @@ public class Kindle {
 
 	public void deleteBook(Book b) {
 		books.remove(b);
-	}
-}
-
-enum Format {
-	EPUB("epub"), PDF("pdf"), MOBI("mobi");
-
-	private String content;
-
-	Format(String content) {
-		this.content = content;
-	}
-
-	public String getContent() {
-		return content;
 	}
 }

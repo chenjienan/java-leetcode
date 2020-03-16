@@ -25,6 +25,7 @@ public class AllSubSet {
 
         // case 1: add current char at index
         prefix.append(input[index]);
+        prefix.append("_");
         DFS(input, index + 1, prefix, res);
         prefix.deleteCharAt(prefix.length() - 1);
 
@@ -67,10 +68,11 @@ public class AllSubSet {
 
 	public static void main(String[] args)
 	{
-        String str = "abab";
+        String str = "abc";
+        // String str = "abab";
         AllSubSet solution = new AllSubSet();
-        // System.out.println(solution.subSets1(str));
+        System.out.println(solution.subSets1(str));
 
-        System.out.println(solution.subSets2(str));
+        // System.out.println(solution.subSets2(str));
 	}
 }
