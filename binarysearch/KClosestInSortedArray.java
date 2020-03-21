@@ -1,5 +1,4 @@
 package binarysearch;
-// import java.util.*;
 
 import java.util.Arrays;
 
@@ -12,7 +11,7 @@ public class KClosestInSortedArray {
 		while (left + 1 < right) {
 			int mid = left + (right - left) / 2;
 
-			if (arr[mid] <= target) {
+			if (arr[mid] < target) {
 				left = mid;
 			} else {
 				right = mid;
@@ -27,7 +26,7 @@ public class KClosestInSortedArray {
 			} else if (right >= arr.length) {
 				res[i] = arr[left];
 				left--;
-			} else if (Math.abs(target - arr[left]) < Math.abs(target - arr[right])) {
+			} else if (Math.abs(target - arr[left]) <= Math.abs(target - arr[right])) {
 				res[i] = arr[left];
 				left--;
 			} else {
@@ -39,7 +38,8 @@ public class KClosestInSortedArray {
 	}
 	public static void main(String[] args)
 	{
-		int[] arr = new int[]{1, 4, 6, 8};
+											//  0 1 2 3 4 5 6 7 8 9
+		int[] arr = new int[]{0,0,1,2,3,3,4,7,7,8};
 		KClosestInSortedArray sol = new KClosestInSortedArray();
 		System.out.println(Arrays.toString(sol.kClosest(arr, 3, 3)));
 	}

@@ -1,5 +1,4 @@
 package dfs;
-import java.util.*;
 
 
 public class KeepDistanceForIdenticalElements {

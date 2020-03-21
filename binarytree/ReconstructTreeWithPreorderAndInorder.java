@@ -4,7 +4,7 @@ import java.util.*;
 
 
 public class ReconstructTreeWithPreorderAndInorder {
-  public TreeNode reconstruct(int[] inOrder, int[] preOrder) {
+  public TreeNode<Integer> reconstruct(int[] inOrder, int[] preOrder) {
     
     // pre-process inorder array into HashMap key: array value, value: idx
     Map<Integer, Integer> idxMap = new HashMap<>();
@@ -15,7 +15,7 @@ public class ReconstructTreeWithPreorderAndInorder {
     return construct(inOrder, 0, inOrder.length - 1, preOrder, 0, preOrder.length - 1, idxMap);
   }
 
-  private TreeNode construct(int[] in, int inLeft, int inRight, int[] pre, int preLeft, int preRight, Map<Integer, Integer> idxMap) {
+  private TreeNode<Integer> construct(int[] in, int inLeft, int inRight, int[] pre, int preLeft, int preRight, Map<Integer, Integer> idxMap) {
 
     // base case
     if (inLeft > inRight) {
