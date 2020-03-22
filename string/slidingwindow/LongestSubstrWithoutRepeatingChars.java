@@ -10,7 +10,7 @@ public class LongestSubstrWithoutRepeatingChars {
         }
 
         int globalMax = 0;
-        HashSet<Character> seen = new HashSet<>();
+        HashSet<Character> seen = new HashSet<>(); // should be sync with the chars in window
         // compute current window
         int left = 0;
         int right = 0;
@@ -18,10 +18,10 @@ public class LongestSubstrWithoutRepeatingChars {
         while (right < input.length()) {
             if (!seen.contains(input.charAt(right))) {
                 seen.add(input.charAt(right));
-                globalMax = Math.max(globalMax, right - left + 1);
+                globalMax = Math.max(globalMax, right - left + 1); // get max window size
                 right++;
             } else {
-                seen.remove(input.charAt(left));
+                seen.remove(input.charAt(left)); // shrink window size until no prepeating chars
                 left++;
             }
         }
